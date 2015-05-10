@@ -18,9 +18,11 @@ function getUUID($username) {
 }
 
 function getUsername($uuid) {
-	if(strlen($uuid) != 36)
+	if(strlen($uuid) != 36 && strlen($uuid) != 32)
 		return false;
-    $uuid = deformatUUID($uuid);
+    if(strlen($uuid) == 36) {
+        $uuid = deformatUUID($uuid);
+    }
     //  Initiate curl
     $ch = curl_init();
     // Disable SSL verification
