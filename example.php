@@ -1,9 +1,3 @@
-# Minecraft-UUID-Utils
-Minecraft UUID Utils
-
-example.php
-
-```php
 <?php
 require_once('Minecraft-UUID-Utils.php');
 
@@ -23,4 +17,3 @@ echo getUsername("85b99109-67f8-4397-b25b-55b1167b6441");
  * The_Defman
  */ 
 ?>
-```
