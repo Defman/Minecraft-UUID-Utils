@@ -1,6 +1,7 @@
 <?php
 
 function getUUID($username) {
+    try{
 	if(strlen($username) >= 16)
 		return false;
     //  Initiate curl
@@ -10,11 +11,14 @@ function getUUID($username) {
     // Will return the response, if false it print the response
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     // Set the url
-    curl_setopt($ch, CURLOPT_URL,' https://api.mojang.com/users/profiles/minecraft/'.$username);
+    curl_setopt($ch, CURLOPT_URL,'https://api.mojang.com/users/profiles/minecraft/'.$username);
     // Execute
     $json=curl_exec($ch);
     $data = json_decode($json,true);
     return formatUUID($data['id']);
+    }catch(exception $e) {
+        echo $e->getMessage();
+    }
 }
 
 function getUsername($uuid) {
