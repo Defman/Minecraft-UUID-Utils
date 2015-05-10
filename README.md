@@ -23,3 +23,5 @@ echo "Username: ".getUsername("85b99109-67f8-4397-b25b-55b1167b6441")."<br>";
  */ 
 ?>
 ```
+
+If you want me to make this more power, like adding support for skin, and getting old names and etc. Leave a comment.
